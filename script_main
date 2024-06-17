@@ -1,0 +1,36 @@
+vetor_musico = []
+running = True
+novo_musico = []
+while(running):
+    resposta=int(input("""clique 1 para adicionar musicos
+clique 2 para adicionar album
+clique 3 para remover musicos
+clique 4 para remover albuns
+clique 5 para sair da interface grafica
+"""))
+    if (resposta == 1):
+        nome=str(input("nome do musico: "))
+        instrumento_selecionado=str(input("selecionar instrumento: (Guitarra, Bateria, Micronfone): "))
+        novo_musico = Musico(nome,instrumento_selecionado)
+        banda.adicionar_musico(novo_musico)
+    if (resposta == 2):
+        pass
+    if (resposta == 3):
+        pass
+    if (resposta == 4):
+        pass
+    if (resposta == 5):
+        running=False
+print("programa finalizado")
+banda.mostrar_musicos()
+
+
+album:
+class Album:
+    def __init__(self, titulo, ano_lancamento, lista_faixas):
+        self.titulo = titulo
+        self.ano_lancamento = ano_lancamento
+        self.lista_faixas = lista_faixas
+    
+    def mostrar_info(self):
+        print(f'Album: {self.titulo}, {self.ano_lancamento}, {self.lista_faixas} ')
